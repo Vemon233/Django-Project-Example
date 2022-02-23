@@ -68,5 +68,6 @@ def add_page(request, category_name_slug):
 
 
 def about(request):
-    context_dict = {'boldmessage': 'This tutorial has been put together by Zhang Hui.'}
-    return render(request, 'rango/about.html', context=context_dict)
+    print(request.method)
+    print(request.user)
+    return render(request, 'rango/about.html', {})
